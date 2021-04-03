@@ -1,6 +1,7 @@
-##CRUD
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="![git_upload](https://user-images.githubusercontent.com/64616734/113463367-263c3180-9447-11eb-886f-69f03d187677.PNG)
-" width="400"></a></p>
+## CRUD
+![git_upload](https://user-images.githubusercontent.com/64616734/113463367-263c3180-9447-11eb-886f-69f03d187677.PNG)
+
+
 
 <p align="center">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
