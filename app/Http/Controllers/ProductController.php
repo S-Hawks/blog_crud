@@ -39,11 +39,11 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        $attributes = $request->validate([
-            'name' => 'required|unique:products,name',
+        $request->validate([
+            'name' => 'required',
             'detail' => 'required',
         ]);
-        Product::create($attributes);
+        Product::create($request->all());
 
         return redirect()->route('products.index')->with('success','Product created successfully. ');
     }
@@ -79,12 +79,12 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
-       $attributes = $request->validate([
-            'name' => "required|unique:products,name,$product->id",
+        $request->validate([
+            'name' => 'required',
             'detail' => 'required',
         ]);
 
-        $product->update($attributes);
+        $product->update($request->all());
 
         return redirect()->route('products.index')->with('success', 'Product updated successfully');
     }
