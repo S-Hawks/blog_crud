@@ -1,5 +1,8 @@
 ## CRUD
 ![git_upload](https://user-images.githubusercontent.com/64616734/113463367-263c3180-9447-11eb-886f-69f03d187677.PNG)
+![validation](https://user-images.githubusercontent.com/64616734/114018446-0d8cab00-988f-11eb-942d-5634c0ac557b.PNG)
+![edit](https://user-images.githubusercontent.com/64616734/114018543-2c8b3d00-988f-11eb-8ef5-76fd399f8386.PNG)
+
 
 
 
