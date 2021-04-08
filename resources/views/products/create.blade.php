@@ -11,7 +11,7 @@
         </div>
     </div>
 </div>
-
+{{--
 @if ($errors->any())
     <div class="alert alert-danger">
         <strong>Whoops!</strong> There were some problems with your input.<br><br>
@@ -21,7 +21,7 @@
             @endforeach
         </ul>
     </div>
-@endif
+@endif --}}
 
 <form action="{{ route('products.store') }}" method="POST">
     @csrf
@@ -30,14 +30,20 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Name:</strong>
-                <input type="text" name="name" class="form-control" placeholder="Name">
+                <input type="text" name="name" class="form-control @error('name') is-invalid @enderror" placeholder="Name">
             </div>
+            @error('name')
+                <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Detail:</strong>
-                <textarea class="form-control" style="height:150px" name="detail" placeholder="Detail"></textarea>
+                <textarea class="form-control @error('detail') is-invalid @enderror" style="height:150px" name="detail" placeholder="Detail"></textarea>
             </div>
+            @error('detail')
+                <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                 <button type="submit" class="btn btn-primary">Submit</button>
